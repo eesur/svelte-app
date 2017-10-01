@@ -1,0 +1,82 @@
+<div class='widget-container'>
+  <Item title={{title}} subtitle={{subtitle}} images={{images}} copy={{copy}}/>
+</div>
+
+<hr>
+
+<h1 class="h5 caps">index</h1>
+
+<section class='clearfix flex flex-wrap'>
+{{#each content as item}}
+  <div on:click='updateFeature(item)' class='col-3 align-center text-decoration-none'>
+    <div class='img-wrap'>
+      <figure class='m0 p0'>
+        <img class='fit' src={{item.thumbnail}} alt='thumbnail'>
+        <figcaption class='center'>
+          {{item.thumbCaption}}
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+{{/each}}
+</section>
+
+<script>
+  import Item from './Item.html'
+  export default {
+    data () {
+      return {
+        thumbCaption: 'View item',
+        title: '',
+        subtitle: '',
+        images: [{
+          img: null,
+          caption: ''
+        }],
+        copy: ''
+      }
+    },
+    components: {
+      Item
+    },
+    methods: {
+      updateFeature: function (d) {
+        console.log(d)
+        this.set({ images: d.images })
+        this.set({ copy: d.copy })
+        this.set({ title: d.title })
+        this.set({ subtitle: d.subtitle })
+        window.scrollTo(200, 0)
+      }
+    }
+  }
+
+</script>
+
+<style>
+  .img-wrap img {
+    opacity: 0.6;
+  }
+  .img-wrap {
+    background-color: #a5a6a9;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+  }
+  .img-wrap:hover {
+    background-color: #f45844;
+  }
+  .img-wrap figcaption {
+    text-decoration: none;
+    color: #2f292b;
+  }
+  .img-wrap figcaption {
+    position: relative;
+    color: #2f292b;
+    margin-top: 10px;
+    padding-bottom: 15px;
+  }
+</style>

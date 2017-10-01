@@ -1,0 +1,37 @@
+<section class="clearfix">
+  <h1 class='h2 regular mb0 pb0'>{{title}}</h1>
+  <span class='block caps h5 mt0 mb2'>{{subtitle}}</span>
+  {{#each images as image}}
+    <figure class='m0 p0'>
+      <img class="fit mb1" src="{{image.img}}">
+      <figcaption class='center mb3 h6'>
+        {{image.caption}}
+      </figcaption>
+    </figure>
+  {{/each}}
+<p class="max-width-3 mb4">{{copy}}</p>
+</section>
+
+<script>
+  export default {
+    data () {
+      return {
+        title: '',
+        subtitle: '',
+        images: [{
+          img: null,
+          caption: ''
+        }],
+        copy: ''
+      }
+    }
+  }
+</script>
+
+<style>
+  figcaption {
+    letter-spacing: 1px;
+    font-family: monospace;
+  }
+</style>
+
