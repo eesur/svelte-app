@@ -1,6 +1,8 @@
 # Svelte app for a portfolio
 
-This is a first draft portfolio app using [magical disappearing UI framework, Svelte](https://svelte.technology/). View example: 
+This is a first draft portfolio app using [magical disappearing UI framework, Svelte](https://svelte.technology/). 
+
+View example: https://eesur.github.io/svelte-app/public/
 
 The idea is to have a simple, clean solution to display projects/portfolio
 
