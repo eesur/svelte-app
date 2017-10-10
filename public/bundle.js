@@ -479,7 +479,7 @@ var methods = {
 };
 
 function encapsulateStyles(node) {
-	setAttribute(node, "svelte-3194051150", "");
+	setAttribute(node, "svelte-3685268103", "");
 }
 
 function create_main_fragment(state, component) {
