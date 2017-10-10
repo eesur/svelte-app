@@ -36,6 +36,16 @@ It only has a CSS dependency of [Basscss](http://basscss.com/)
 - Be able to highlight (fade out?) the active thumbnail
 - Add some logic to not show feature item on initial load (including containing `div`)
 
+--------------------
+
+## Dev notes    
+
+```bash
+npm run dev
+```
+
+Navigate to [localhost:5000](http://localhost:5000).Edit a component file in `src`, save it, and reload the page to see your changes.
+
 ---------------------
 
 The below is from the original Svelte template readme:

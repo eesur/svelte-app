@@ -1,3 +1,5 @@
+<Header title={{settings.title}}/>
+
 <div class='widget-container'>
   <Item title={{title}} subtitle={{subtitle}} images={{images}} copy={{copy}}/>
 </div>
@@ -22,6 +24,7 @@
 </section>
 
 <script>
+  import Header from './Header.html'
   import Item from './Item.html'
   export default {
     data () {
@@ -37,15 +40,12 @@
       }
     },
     components: {
+      Header,
       Item
     },
     methods: {
       updateFeature: function (d) {
-        console.log(d)
-        this.set({ images: d.images })
-        this.set({ copy: d.copy })
-        this.set({ title: d.title })
-        this.set({ subtitle: d.subtitle })
+        this.set(d)
         window.scrollTo(200, 0)
       }
     }

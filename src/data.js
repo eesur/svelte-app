@@ -1,4 +1,7 @@
 const data = {
+  settings: {
+    title: 'Portfolio'
+  },
   content: [
     {
       thumbnail: 'assets/img/ch-01-t.png',
